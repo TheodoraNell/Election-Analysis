@@ -11,16 +11,16 @@ The following outcomes were determined through this analysis:
 - Total number of votes cast in this election: **369,711**
     value returened using a loop, as each row in the data represents a unique vote:
   
-`    for row in reader:
+`       for row in reader:
 
-        # Add to the total vote count
-        total_votes = total_votes + 1
+            # Add to the total vote count
+            total_votes = total_votes + 1
         
-        # Get the candidate name from each row.
-        candidate_name = row[2]
+            # Get the candidate name from each row.
+            candidate_name = row[2]
 
-        # Extract the county name from each row.
-        county_name = row[1]`
+            # Extract the county name from each row.
+            county_name = row[1]`
 
 - Number and percentage of votes by county
   - **Jefferson   10.5%   38,855**
@@ -30,35 +30,35 @@ The following outcomes were determined through this analysis:
     values returned with a loops to get the county associated with each vote and to caluculate the percentages:
     (similar method used to find the candidate vote counts and percentages)
   
-`    if county_name not in County_list:
+`       if county_name not in County_list:
        
-        # Add the existing county to the list of counties.
-        County_list.append(county_name)
+            # Add the existing county to the list of counties.
+            County_list.append(county_name)
 
-        # Begin tracking the county's vote count.
-        county_votes[county_name] = 0
+            # Begin tracking the county's vote count.
+            county_votes[county_name] = 0
 
-        # Add a vote to that county's vote count.
-        county_votes[county_name] += 1
+            # Add a vote to that county's vote count.
+            county_votes[county_name] += 1
         
-    ...
+        ...
         
-    for county_name in county_votes:
+        for county_name in county_votes:
 
-        # Retrieve the county vote count.
-        turnout_votes = county_votes.get(county_name)
-        # Calculate the percentage of votes for the county.
-        county_turnout_percentage = float(turnout_votes) / float(total_votes) * 100`
+            # Retrieve the county vote count.
+            turnout_votes = county_votes.get(county_name)
+            # Calculate the percentage of votes for the county.
+            county_turnout_percentage = float(turnout_votes) / float(total_votes) * 100`
         
 - County with the largest number of votes: **Denver**
 
     value returned using a loop with a conditional to compare the percentages of votes from each county and find the highest:
     (similar method used to find the winning candidate)
 
-`    if (turnout_votes > turnout_count) and (county_turnout_percentage > turnout_winning_percentage):
-        turnout_count = turnout_votes
-        highest_turnout = county_name
-        highest_percentage = county_turnout_percentage`
+`       if (turnout_votes > turnout_count) and (county_turnout_percentage > turnout_winning_percentage):
+            turnout_count = turnout_votes
+            highest_turnout = county_name
+            highest_percentage = county_turnout_percentage`
 
 - Number and percentage of votes by candidate
   - **Charles Casper Stockham   23.0%   85,213**
