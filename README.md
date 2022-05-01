@@ -2,7 +2,7 @@
 Performing an audit on election data using Python 
 
 ## Overview
-The Purpose of this audit is to confirm congressional election results and create a deatailed report of key metrics from the voting data. Additonal analysis is performed to provide insight into county-specific voting trends as well as voter turnout. 
+The Purpose of this audit is to confirm congressional election results and create a detailed report of key metrics from the voting data. Additional analysis is performed to provide insight into voter turnout by county. 
 
 ## Election-Audit Results
 
@@ -10,7 +10,7 @@ The following outcomes were determined through this analysis:
 
 ### - Total number of votes cast in this election:
    - **369,711**
-   - value returned using a loop, as each row in the data represents a unique vote:
+   - Value returned using a loop, as each row in the data represents a unique vote:
         
          for row in reader:
             
@@ -80,7 +80,7 @@ The following outcomes were determined through this analysis:
       
 ## Election-Audit Summary
 
-The script used in this analysis could be easily modified to audit future elections with the same voting system as well as refactored for use with different voting systems and to get additional metrics. Possible examples include:
+The script used in this analysis could be modified and used to audit future elections with the same voting system as well as refactored for use with different voting systems and to get additional metrics. Possible examples include:
 
 - For elections where the winner is determined by the number of voting districts they win (instead of majority of overall votes) the script could be edited to first find the winning candidate for each county and then compare the number of wins for each candidate to find the winner, factoring in any possible point value differences for larger or smaller districts.
 
