@@ -11,7 +11,7 @@ The following outcomes were determined through this analysis:
 - Total number of votes cast in this election: **369,711**
     value returened using a loop, as each row in the data represents a unique vote:
   
-`       for row in reader:
+>       `for row in reader:
 
             # Add to the total vote count
             total_votes = total_votes + 1
