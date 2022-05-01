@@ -80,8 +80,10 @@ The following outcomes were determined through this analysis:
       
 ## Election-Audit Summary
 
-The script used in this analysis could be modified to audit future elections as well as refactored for use with different voting systems and to get additional metrics. Two possible examples inclue:
+The script used in this analysis could be easily modified to audit future elections with the same voting system as well as refactored for use with different voting systems and to get additional metrics. Possible examples include:
 
-- For elections with multi-winner voting systems (city council for example) the script to find the winning candidate could be edidted to return multiple winners with the x number of highest ranking vote counts depending on the number of open seats. Possible considerations would be the type of multi-winner system used (block, single, or cumulative voting)
+- For elections where the winner is determined by the number of voting districts they win (instead of majority of overall votes) the script could be edited to first find the winning candidate for each county and then compare the number of wins for each candidate to find the winner, factoring in any possible point value differences for larger or smaller districts.
+
+- For elections with multi-winner voting systems the script to find the winning candidate could be edidted to return multiple winners with the x number of highest ranking vote counts depending on the number of open seats. Possible considerations would be the type of multi-winner system used (block, single, or cumulative voting)
 
 - If the data is available, getting the relative county voter turnout in addition to the overall allows for deeper analysis since counties with larger populations will most likely have higher turnouts in elections but smaller counties might have higher relative turnout. This refactoring could possibly be achieved with the addition of a dictionary of registered voters (or eligible voters) by county. The county votes would then be divided by the value for that county and multiplied by 100 to find the relative percentage. 
