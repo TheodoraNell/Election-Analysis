@@ -23,9 +23,9 @@ The following outcomes were determined through this analysis:
             county_name = row[1]
 
 ### - Number and percentage of votes by county
-   **Jefferson   10.5%   38,855**
-   **Denver      82.8%   306,055**
-   **Arapahoe    6.7%    24,801**
+      - **Jefferson   10.5%   38,855**
+      - **Denver      82.8%   306,055**
+      - **Arapahoe    6.7%    24,801**
   
    values returned with a loops to get the county associated with each vote and to caluculate the percentages:
    (similar method used to find the [candidate vote counts and percentages](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--number-and-percentage-of-votes-by-candidate)
