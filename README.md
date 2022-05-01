@@ -29,9 +29,9 @@ The following outcomes were determined through this analysis:
 
     values returned with a loops to get the county associated with each vote and to caluculate the percentages:
     (similar method used to find the candidate vote counts and percentages)
-  
-`       if county_name not in County_list:
        
+        `if county_name not in County_list:
+        
             # Add the existing county to the list of counties.
             County_list.append(county_name)
 
@@ -55,7 +55,7 @@ The following outcomes were determined through this analysis:
     value returned using a loop with a conditional to compare the percentages of votes from each county and find the highest:
     (similar method used to find the winning candidate)
 
-`       if (turnout_votes > turnout_count) and (county_turnout_percentage > turnout_winning_percentage):
+        `if (turnout_votes > turnout_count) and (county_turnout_percentage > turnout_winning_percentage):
             turnout_count = turnout_votes
             highest_turnout = county_name
             highest_percentage = county_turnout_percentage`
