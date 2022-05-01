@@ -8,10 +8,11 @@ The Purpose of this audit is to confirm congressional election results and creat
 
 The following outcomes were determined through this analysis: 
 
-### - Total number of votes cast in this election: **369,711**
-   value returened using a loop, as each row in the data represents a unique vote:
-
-        for row in reader:
+### - Total number of votes cast in this election:
+   - **369,711**
+   - value returned using a loop, as each row in the data represents a unique vote:
+        
+         for row in reader:
             
             # Add to the total vote count
             total_votes = total_votes + 1
@@ -22,12 +23,12 @@ The following outcomes were determined through this analysis:
             # Extract the county name from each row.
             county_name = row[1]
 
-### - Number and percentage of votes by county
-      - **Jefferson   10.5%   38,855**
-      - **Denver      82.8%   306,055**
-      - **Arapahoe    6.7%    24,801**
+### - Number and percentage of votes by county:
+   - **Jefferson   10.5%   38,855**
+   - **Denver      82.8%   306,055**
+   - **Arapahoe    6.7%    24,801**
   
-   values returned with a loops to get the county associated with each vote and to caluculate the percentages:
+   - Values returned with a loops to get the county associated with each vote and to caluculate the percentages:
    (similar method used to find the [candidate vote counts and percentages](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--number-and-percentage-of-votes-by-candidate)
        
         if county_name not in County_list:
@@ -50,8 +51,9 @@ The following outcomes were determined through this analysis:
             # Calculate the percentage of votes for the county.
             county_turnout_percentage = float(turnout_votes) / float(total_votes) * 100
         
-### - County with the largest number of votes: **Denver**
-   value returned using a loop with a conditional to compare the percentages of votes from each county and find the highest:
+### - County with the largest number of votes: 
+   - **Denver**
+   - Value returned using a loop with a conditional to compare the percentages of votes from each county and find the highest:
    (similar method used to find the [winning candidate](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--winning-candidate-diana-degette))
 
         if (turnout_votes > turnout_count) and (county_turnout_percentage > turnout_winning_percentage):
@@ -59,18 +61,19 @@ The following outcomes were determined through this analysis:
             highest_turnout = county_name
             highest_percentage = county_turnout_percentage
 
-### - Number and percentage of votes by candidate
-   **Charles Casper Stockham   23.0%   85,213**
-   **Diana DeGette             73.8%   272,892**
-   **Raymon Anthony Doane      3.1%    11,606**
+### - Number and percentage of votes by candidate:
+   - **Charles Casper Stockham   23.0%   85,213**
+   - **Diana DeGette             73.8%   272,892**
+   - **Raymon Anthony Doane      3.1%    11,606**
   
-   Values returned in a similar method to getting [votes by county](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--number-and-percentage-of-votes-by-county)
+   - Values returned in a similar method to getting [votes by county](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--number-and-percentage-of-votes-by-county)
 
-### - Winning Candidate: **Diana DeGette**
-   **Vote Count: 272,892**
-   **Percent of Votes: 73.8%**
+### - Winning Candidate: 
+   - **Diana DeGette**
+   - **Vote Count: 272,892**
+   - **Percent of Votes: 73.8%**
   
-   Values returned in a similar method to getting the county with the [largest voter turnout](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--county-with-the-largest-number-of-votes-denver)
+   - Values returned in a similar method to getting the county with the [largest voter turnout](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--county-with-the-largest-number-of-votes-denver)
       
       
 ## Election-Audit Summary
