@@ -29,7 +29,7 @@ The following outcomes were determined through this analysis:
    - **Arapahoe    6.7%    24,801**
   
    - Values returned with a loops to get the county associated with each vote and to caluculate the percentages:
-   (similar method used to find the [candidate vote counts and percentages](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--number-and-percentage-of-votes-by-candidate))
+   - similar method used to find the [candidate vote counts and percentages](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--number-and-percentage-of-votes-by-candidate)
        
          if county_name not in County_list:
         
@@ -55,7 +55,7 @@ The following outcomes were determined through this analysis:
 ### - County with the largest number of votes: 
    - **Denver**
    - Value returned using a loop with a conditional to compare the percentages of votes from each county and find the highest:
-   (similar method used to find the [winning candidate](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--winning-candidate-diana-degette))
+   - similar method used to find the [winning candidate](https://github.com/TheodoraNell/Election-Analysis/blob/main/README.md#--winning-candidate-diana-degette)
 
          if (turnout_votes > turnout_count) and (county_turnout_percentage > turnout_winning_percentage):
         
@@ -80,6 +80,8 @@ The following outcomes were determined through this analysis:
       
 ## Election-Audit Summary
 
-- possible uses for future elections: 
-  - refactor for larger docket of candidates? 
-  - Use county populations to get voter turnout percentage of each county and target voter accessability in those areas
+The script used in this analysis could be modified to audit future elections as well as refactored for use with different voting systems and to get additional metrics. Two possible examples inclue:
+
+- For elections with multi-winner voting systems (city council for example) the script to find the winning candidate could be edidted to return multiple winners with the x number of highest ranking vote counts depending on the number of open seats. Possible considerations would be the type of multi-winner system used (block, single, or cumulative voting)
+
+- If the data is available, getting the relative county voter turnout in addition to the overall allows for deeper analysis since counties with larger populations will most likely have higher turnouts in elections but smaller counties might have higher relative turnout. This refactoring could possibly be achieved with the addition of a dictionary of registered voters (or eligible voters) by county. The county votes would then be divided by the value for that county and multiplied by 100 to find the relative percentage. 
